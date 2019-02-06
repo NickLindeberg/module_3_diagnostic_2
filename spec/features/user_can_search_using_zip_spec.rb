@@ -2,12 +2,16 @@ require 'rails_helper'
 
 describe 'User can search using zip code' do
   it 'shows stations on /search' do
+    facade = SearchFacade.new("80203")
+    facade.get_station_info("80203")
     visit '/'
 
     fill_in "q", with: 80203
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
+
+
 
   end
 end

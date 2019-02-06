@@ -1,0 +1,8 @@
+<% @facade.stations.each do |station| %>
+  Station: <%= station.name %>
+  Address: <%= station.address %>
+  Fuel Types:<%= station.fuel_types %>
+  Distance: <%= station.distance %>
+  Access Times: <%= station.access_times %>
+
+<% end %>
