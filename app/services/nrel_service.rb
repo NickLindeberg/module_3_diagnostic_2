@@ -1,7 +1,7 @@
 class NrelService
 
   def get_station_info(zip)
-    hash = get_json("v1.json?fuel_type=LPG,ELEC&location=#{zip}&api_key=#{ENV['API_KEY']}&format=JSON&radius=6&limit=10")[:fuel_stations]
+    hash = get_json("v1/nearest.json?fuel_type=LPG,ELEC&location=#{zip}&api_key=#{ENV['API_KEY']}&format=JSON&radius=6&limit=10")[:fuel_stations]
   end
 
   def conn

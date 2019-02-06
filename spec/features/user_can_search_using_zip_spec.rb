@@ -8,7 +8,11 @@ describe 'User can search using zip code' do
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
-
+    expect(page).to have_css('.station', count: 10)
+    expect(page).to have_content("Station: ")
+    expect(page).to have_content("Address: ")
+    expect(page).to have_content("Fuel Types: ")
+    expect(page).to have_content("Access Times: ")
   end
 end
 
