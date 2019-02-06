@@ -16,5 +16,4 @@ class SearchFacade
   def service
     NrelService.new
   end
-
 end

@@ -9,10 +9,11 @@ describe 'User can search using zip code' do
 
     expect(current_path).to eq(search_path)
     expect(page).to have_css('.station', count: 10)
-    expect(page).to have_content("Station: ")
-    expect(page).to have_content("Address: ")
-    expect(page).to have_content("Fuel Types: ")
-    expect(page).to have_content("Access Times: ")
+    expect(page).to have_content("Station: UDR")
+    expect(page).to have_content("Address: 800 Acoma St")
+    expect(page).to have_content("Fuel Types: ELEC")
+    expect(page).to have_content("Access Times: 24 hours daily")
+    expect(page).to have_content("Distance: 0.31422 Miles")
   end
 end
 
